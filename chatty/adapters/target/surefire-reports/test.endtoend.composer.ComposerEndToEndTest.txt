@@ -1,0 +1,33 @@
+-------------------------------------------------------------------------------
+Test set: test.endtoend.composer.ComposerEndToEndTest
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 30.654 sec <<< FAILURE! - in test.endtoend.composer.ComposerEndToEndTest
+composerTranslatesSingleTopicAndSentenceandDeploys()  Time elapsed: 29.105 sec  <<< FAILURE!
+java.lang.AssertionError: 
+
+Tried to find:
+    exactly 1 JTable ()
+    in exactly 1 JFrame (with name "Chatty Bot Composer" and showing on screen)
+    in all top level windows
+and check that it is with cell with text "Active"
+but:
+    all top level windows
+    contained 1 JFrame (with name "Chatty Bot Composer" and showing on screen)
+    contained 0 JTable ()
+	at test.endtoend.composer.ComposerEndToEndTest.composerTranslatesSingleTopicAndSentenceandDeploys(ComposerEndToEndTest.java:36)
+
+composerReportsFailedTranslationForInvalidConversationMessage()  Time elapsed: 0.972 sec  <<< FAILURE!
+java.lang.AssertionError: 
+
+Tried to find:
+    exactly 1 JLabel (with name "composer status")
+    in exactly 1 JFrame (with name "Chatty Bot Composer" and showing on screen)
+    in all top level windows
+and check that its label text is "Invalid Conversation"
+but:
+    all top level windows
+    contained 1 JFrame (with name "Chatty Bot Composer" and showing on screen)
+    contained 1 JLabel (with name "composer status")
+    label text was "Connected"
+	at test.endtoend.composer.ComposerEndToEndTest.composerReportsFailedTranslationForInvalidConversationMessage(ComposerEndToEndTest.java:24)
+

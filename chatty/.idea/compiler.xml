@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="adapters" />
+        <module name="adapters.tests" />
+        <module name="chattycomposerswing" />
+        <module name="core" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="adapters" target="1.5" />
+      <module name="adapters.tests" target="1.5" />
+      <module name="chatty" target="1.5" />
+      <module name="chattycomposerswing" target="1.5" />
+      <module name="core" target="1.5" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
