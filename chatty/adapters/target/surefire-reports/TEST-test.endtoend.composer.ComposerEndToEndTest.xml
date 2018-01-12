@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="test.endtoend.composer.ComposerEndToEndTest" time="30.654" tests="2" errors="0" skipped="0" failures="2">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="test.endtoend.composer.ComposerEndToEndTest" time="13.07" tests="2" errors="1" skipped="0" failures="1">
   <properties>
     <property name="idea.plugins.compatible.build" value="172.9999"/>
     <property name="jna.platform.library.path" value="/usr/lib64:/lib64:/usr/lib:/lib:/usr/lib64/iscsi:/usr/lib64/bind99"/>
@@ -29,7 +29,7 @@
     <property name="os.name" value="Linux"/>
     <property name="classworlds.conf" value="/usr/share/maven/bin/m2.conf"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
-    <property name="jnidispatch.path" value="/tmp/jna-234248964/jna2693202625876624836.tmp"/>
+    <property name="jnidispatch.path" value="/tmp/jna-234248964/jna2991919334192547557.tmp"/>
     <property name="java.library.path" value="/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib"/>
     <property name="maven.conf" value="/usr/share/maven/conf"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
@@ -64,22 +64,12 @@
     <property name="sun.desktop" value="gnome"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase name="composerTranslatesSingleTopicAndSentenceandDeploys" classname="test.endtoend.composer.ComposerEndToEndTest" time="29.105">
-    <failure message="&#10;Tried to find:&#10;    exactly 1 JTable ()&#10;    in exactly 1 JFrame (with name &quot;Chatty Bot Composer&quot; and showing on screen)&#10;    in all top level windows&#10;and check that it is with cell with text &quot;Active&quot;&#10;but:&#10;    all top level windows&#10;    contained 1 JFrame (with name &quot;Chatty Bot Composer&quot; and showing on screen)&#10;    contained 0 JTable ()" type="java.lang.AssertionError">java.lang.AssertionError: 
-
-Tried to find:
-    exactly 1 JTable ()
-    in exactly 1 JFrame (with name "Chatty Bot Composer" and showing on screen)
-    in all top level windows
-and check that it is with cell with text "Active"
-but:
-    all top level windows
-    contained 1 JFrame (with name "Chatty Bot Composer" and showing on screen)
-    contained 0 JTable ()
-	at test.endtoend.composer.ComposerEndToEndTest.composerTranslatesSingleTopicAndSentenceandDeploys(ComposerEndToEndTest.java:36)
-</failure>
+  <testcase name="composerTranslatesSingleTopicAndSentenceandDeploys" classname="test.endtoend.composer.ComposerEndToEndTest" time="11.648">
+    <error type="java.lang.NullPointerException">java.lang.NullPointerException
+	at test.endtoend.composer.ComposerEndToEndTest.composerTranslatesSingleTopicAndSentenceandDeploys(ComposerEndToEndTest.java:34)
+</error>
   </testcase>
-  <testcase name="composerReportsFailedTranslationForInvalidConversationMessage" classname="test.endtoend.composer.ComposerEndToEndTest" time="0.972">
+  <testcase name="composerReportsFailedTranslationForInvalidConversationMessage" classname="test.endtoend.composer.ComposerEndToEndTest" time="1.34">
     <failure message="&#10;Tried to find:&#10;    exactly 1 JLabel (with name &quot;composer status&quot;)&#10;    in exactly 1 JFrame (with name &quot;Chatty Bot Composer&quot; and showing on screen)&#10;    in all top level windows&#10;and check that its label text is &quot;Invalid Conversation&quot;&#10;but:&#10;    all top level windows&#10;    contained 1 JFrame (with name &quot;Chatty Bot Composer&quot; and showing on screen)&#10;    contained 1 JLabel (with name &quot;composer status&quot;)&#10;    label text was &quot;Connected&quot;" type="java.lang.AssertionError">java.lang.AssertionError: 
 
 Tried to find:

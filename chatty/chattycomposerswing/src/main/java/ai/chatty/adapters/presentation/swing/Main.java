@@ -3,11 +3,15 @@ package ai.chatty.adapters.presentation.swing;
 import java.io.IOException;
 import javax.swing.SwingUtilities;
 
+import org.jetbrains.annotations.NotNull;
+
 import ai.chatty.adapters.chatscript.ChatScriptServer;
 import ai.chatty.core.domain.BotComposer;
 import ai.chatty.core.domain.BotServer;
 import ai.chatty.core.domain.Chatty;
 import ai.chatty.core.domain.ComposerListener;
+import ai.chatty.core.domain.Conversation;
+import ai.chatty.core.domain.ScriptFormatter;
 import ai.chatty.core.domain.UserMessageTranslator;
 
 public class Main implements ComposerListener{
@@ -68,7 +72,13 @@ public class Main implements ComposerListener{
     }
 
     private boolean isServerAvailable(String url) throws IOException {
-        chattyServer = new ChatScriptServer(url);
+        ScriptFormatter formatter = new ScriptFormatter() {
+            @NotNull public String format(final Conversation conversation) {
+                return null;
+            }
+        };
+
+        chattyServer = new ChatScriptServer(url, formatter);
         return chattyServer.isAvailable();
     }
 

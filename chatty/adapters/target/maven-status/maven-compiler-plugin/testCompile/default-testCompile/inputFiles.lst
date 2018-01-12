@@ -1,5 +1,6 @@
 /home/atillman/Dev/chatty/chatty/adapters/src/test/java/test/endtoend/composer/ApplicationRunner.java
 /home/atillman/Dev/chatty/chatty/adapters/src/test/java/test/unit/BotComposerTests.java
+/home/atillman/Dev/chatty/chatty/adapters/src/test/java/test/unit/ChatScriptServerTest.java
 /home/atillman/Dev/chatty/chatty/adapters/src/test/java/test/endtoend/composer/ComposerEndToEndTest.java
 /home/atillman/Dev/chatty/chatty/adapters/src/test/java/test/endtoend/composer/BotComposerDriver.java
 /home/atillman/Dev/chatty/chatty/adapters/src/test/java/test/endtoend/composer/DBUtil.java

@@ -8,6 +8,7 @@ import org.junit.jupiter.api.DisplayName;
 import ai.chatty.core.domain.BotComposer;
 import ai.chatty.core.domain.Chatty;
 import ai.chatty.core.domain.ComposerListener;
+import ai.chatty.core.domain.Conversation;
 //import ai.chatty.core.domain.Conversation;
 
 public class BotComposerTests {
@@ -28,18 +29,19 @@ public class BotComposerTests {
         context.assertIsSatisfied();
     }
 
-    /*
+
     @Test @DisplayName("Testing BotComposer Notifies Listener that Translation Complete") public void
     notifiesComposerListenerTranslationCompleted() {
         context.checking(new Expectations() {{
             oneOf(listener).translationComplete();
-            atLeast(1).of(chatty).uploadConversation(with(any(String.class)));
+            atLeast(1).of(chatty).uploadConversation(with(any(Conversation.class)));
         }});
 
-        composer.translationComplete();
+        composer.translationComplete(
+                new Conversation("introductions", "Hello, talk to me."));
 
         context.assertIsSatisfied();
-    } */
+    }
 
     /*
     @Test @DisplayName("Testing BotComposer Reports Sends Translation") public void

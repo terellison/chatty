@@ -31,7 +31,7 @@ public class ComposerEndToEndTest {
         botServer.start();
 
         application.startTranslating(msg);
-        botServer.hasRecievedTranslatedScript(msg);
+        botServer.hasRecievedTranslatedScript(BOT_NAME, msg);
 
         application.showsConversationActive();
 

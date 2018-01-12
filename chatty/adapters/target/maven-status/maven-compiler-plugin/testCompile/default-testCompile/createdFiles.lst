@@ -1,1 +1,3 @@
+test/endtoend/composer/ComposerEndToEndTest.class
+test/endtoend/composer/FakeBotServer.class
 test/unit/BotComposerTests$2.class

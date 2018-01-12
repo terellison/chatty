@@ -1,22 +1,12 @@
 -------------------------------------------------------------------------------
 Test set: test.endtoend.composer.ComposerEndToEndTest
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 30.654 sec <<< FAILURE! - in test.endtoend.composer.ComposerEndToEndTest
-composerTranslatesSingleTopicAndSentenceandDeploys()  Time elapsed: 29.105 sec  <<< FAILURE!
-java.lang.AssertionError: 
+Tests run: 2, Failures: 1, Errors: 1, Skipped: 0, Time elapsed: 13.07 sec <<< FAILURE! - in test.endtoend.composer.ComposerEndToEndTest
+composerTranslatesSingleTopicAndSentenceandDeploys()  Time elapsed: 11.648 sec  <<< ERROR!
+java.lang.NullPointerException
+	at test.endtoend.composer.ComposerEndToEndTest.composerTranslatesSingleTopicAndSentenceandDeploys(ComposerEndToEndTest.java:34)
 
-Tried to find:
-    exactly 1 JTable ()
-    in exactly 1 JFrame (with name "Chatty Bot Composer" and showing on screen)
-    in all top level windows
-and check that it is with cell with text "Active"
-but:
-    all top level windows
-    contained 1 JFrame (with name "Chatty Bot Composer" and showing on screen)
-    contained 0 JTable ()
-	at test.endtoend.composer.ComposerEndToEndTest.composerTranslatesSingleTopicAndSentenceandDeploys(ComposerEndToEndTest.java:36)
-
-composerReportsFailedTranslationForInvalidConversationMessage()  Time elapsed: 0.972 sec  <<< FAILURE!
+composerReportsFailedTranslationForInvalidConversationMessage()  Time elapsed: 1.34 sec  <<< FAILURE!
 java.lang.AssertionError: 
 
 Tried to find:
