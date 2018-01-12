@@ -1,23 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: test.endtoend.composer.ComposerEndToEndTest
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 1, Errors: 1, Skipped: 0, Time elapsed: 13.07 sec <<< FAILURE! - in test.endtoend.composer.ComposerEndToEndTest
-composerTranslatesSingleTopicAndSentenceandDeploys()  Time elapsed: 11.648 sec  <<< ERROR!
-java.lang.NullPointerException
+Tests run: 2, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 5.576 sec <<< FAILURE! - in test.endtoend.composer.ComposerEndToEndTest
+composerTranslatesSingleTopicAndSentenceandDeploys()  Time elapsed: 5.355 sec  <<< ERROR!
+java.io.EOFException: End of input
 	at test.endtoend.composer.ComposerEndToEndTest.composerTranslatesSingleTopicAndSentenceandDeploys(ComposerEndToEndTest.java:34)
-
-composerReportsFailedTranslationForInvalidConversationMessage()  Time elapsed: 1.34 sec  <<< FAILURE!
-java.lang.AssertionError: 
-
-Tried to find:
-    exactly 1 JLabel (with name "composer status")
-    in exactly 1 JFrame (with name "Chatty Bot Composer" and showing on screen)
-    in all top level windows
-and check that its label text is "Invalid Conversation"
-but:
-    all top level windows
-    contained 1 JFrame (with name "Chatty Bot Composer" and showing on screen)
-    contained 1 JLabel (with name "composer status")
-    label text was "Connected"
-	at test.endtoend.composer.ComposerEndToEndTest.composerReportsFailedTranslationForInvalidConversationMessage(ComposerEndToEndTest.java:24)
 

@@ -8,9 +8,11 @@ class UserMessageTranslator (private val eventListener: TranslationEventListener
 
 
     fun translate(msg : String) {
+        var translation : Conversation? = null
 
-        val translation: Conversation? =
-                try { unpackEventFrom(msg) } catch (e : JsonEncodingException) { null }
+        try {
+            translation = ConversationAdapter.fromString(msg)
+        } catch (e : JsonEncodingException) { null }
 
         if (translation == null){
             eventListener.translationFailed()
@@ -19,14 +21,5 @@ class UserMessageTranslator (private val eventListener: TranslationEventListener
 
     }
 
-
-    private fun unpackEventFrom(msg: String) : Conversation? {
-        val moshi = Moshi.Builder()
-                .add(KotlinJsonAdapterFactory())
-                .build()
-
-        val conversationAdapter = moshi.adapter(Conversation::class.java)
-        return conversationAdapter.fromJson(msg)
-    }
 }
 

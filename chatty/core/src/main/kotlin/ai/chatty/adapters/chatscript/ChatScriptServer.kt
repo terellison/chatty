@@ -20,8 +20,7 @@ class ChatScriptServer(private val url: String, private val formatter: ScriptFor
     }
 
     override fun getConversation(botId: String) : Conversation? {
-        var conversation: Conversation
-        var output: String = ""
+        var output = ""
 
         try {
 
